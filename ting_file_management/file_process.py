@@ -20,6 +20,12 @@ def process(path_file, instance):
 
 def remove(instance):
     """Aqui irá sua implementação"""
+    if(len(instance.data) == 0):
+        return sys.stdout.write('Não há elementos\n')
+    file_to_delete = instance.dequeue()
+    sys.stdout.write(
+        f'Arquivo {file_to_delete["nome_do_arquivo"]} removido com sucesso\n'
+    )
 
 
 def file_metadata(instance, position):
